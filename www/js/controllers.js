@@ -4,8 +4,16 @@ angular.module('starter.controllers', [])
    $scope.click = function(arg) {
     alert('Clicked ' + arg);
   }
-  $scope.html = '<a ng-click="click(1)" href="#">Click me</a>';
-  
+  $scope.html = '<div class="flip-container" ontouchstart="this.classList.toggle(\'hover\');"> \
+	<div class="flipper"> \
+		<div class="front"> \
+			<img src="http://lh5.ggpht.com/M7U_7_yQs5ffBg4F78Q2fPDvi90SEw9t2UKQMbnV85CWumpG3dxzPlW7wgMdyiD0xqzqth1pDGuso7ljc74SEbuBtbM-BSNMi_PPf9I"/> \
+		</div> \
+		<div class="back"> \
+			<img src="http://lh4.ggpht.com/C52ACr_1crR1nOtxVxLGFJa5B_bFqf-MLLm-AKvBdJrHvPFv6fGKw3B2S5fZ6grU-RRR9tPTLSqwaIzkQxY5U-V_dUlgAyoEEM0hE0Ta=s660"/> \
+		</div> \
+	</div> \
+  </div>';
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
