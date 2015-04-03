@@ -1,5 +1,14 @@
 angular.module('starter.services', [])
 
+.service('SensorService', function() {
+  var relayr = RELAYR.init({
+    appId: "da4815e5-1056-459b-8e2a-de07f604529f",
+    redirectUri: "http://c9-ionic-poc-raynerv.c9.io"
+  });
+  
+  this.relayr = relayr;
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 

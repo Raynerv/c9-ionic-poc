@@ -14,6 +14,7 @@
         "@searchLimit": 100
     },
     "language": {
+        "@eslintrc": "true",
         "@instanceHighlight": true,
         "@semi": true,
         "@undeclaredVars": true,
@@ -22,9 +23,17 @@
     },
     "run": {
         "@path": "/.c9/runners",
+        "@runner": "C++ (simple)",
         "configs": {
             "@inited": true,
-            "json()": {}
+            "json()": {
+                "Serve": {
+                    "command": "ionic serve -p $PORT -address $IP",
+                    "debug": true,
+                    "name": "Serve",
+                    "runner": "Shell command"
+                }
+            }
         }
     },
     "share": {

@@ -1,6 +1,14 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, SensorService) {
+  SensorService.relayr.login({
+    success: function(token) {
+      SensorService.devices.getAllDevices(
+          function(devices) {
+            $scope.html = devices;
+          }
+      )}});
+  /*
    $scope.click = function(arg) {
     alert('Clicked ' + arg);
   }
@@ -14,6 +22,8 @@ angular.module('starter.controllers', [])
 		</div> \
 	</div> \
   </div>';
+  */
+
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
